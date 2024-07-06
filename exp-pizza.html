@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Explore</title>
+    <link rel="icon" href="images/pizza-svgrepo-com.svg" type="image/x-icon" />
+
+    <style>
+      .back-button,
+      .fun-fact-button {
+        font-weight: 500;
+        font-size: 22px;
+        color: white;
+        background-color: rgb(247, 197, 73);
+        border-radius: 25px;
+        border: none;
+        text-align: center;
+        width: 200px;
+        height: 75px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+      }
+      .fun-fact-button {
+        font-size: 21px;
+        background-color: rgb(3, 22, 50);
+        border-radius: 3px;
+        box-shadow: 0 9px rgb(76, 76, 76);
+      }
+      .fun-fact-button:hover {
+        font-size: 22px;
+        opacity: 0.9;
+      }
+      .fun-fact-button:active {
+        font-size: 21px;
+        box-shadow: 0 4px gray;
+        transform: translateY(4px);
+      }
+      .back-button span:after {
+        content: "\00AB";
+        position: absolute;
+        opacity: 0;
+        /*push the span text to negative 20 pixels on left side*/
+        left: -20px;
+        transition: 0.5s;
+      }
+      .back-button:hover {
+        background-color: rgb(3, 22, 50);
+      }
+      .exp-button:active {
+        opacity: 0.7;
+      }
+      /*when u hover the button the span text will be pushed on right side*/
+      .back-button:hover span {
+        padding-left: 25px;
+      }
+
+      .back-button:hover span:after {
+        opacity: 1;
+        left: 0;
+      }
+
+      .bg-image {
+        /* The image used */
+        background-image: url(images/mmmmm.webp);
+
+        /* Add the blur effect */
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      font-family: Roboto, Arial;
+      height: 100%;
+      padding: 0%;
+      margin: 0%;
+      background: url(images/mmmmm.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  >
+    <div class="bg-image"></div>
+
+    <header
+      style="
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        height: 13%;
+        background-color: rgb(247, 197, 73);
+        align-items: center;
+        z-index: 100;
+        color: white;
+      "
+    >
+      <div
+        style="height: 16%; display: flex; align-items: center; width: 20%"
+        ;p
+      >
+        <img
+          class="icon"
+          style="width: 25%; margin-left: 5%; margin-right: 5%"
+          src="images/pizza-svgrepo-com.svg"
+        />
+      </div>
+
+      <h1 style="margin-right: 10%">Appetizing Pizza</h1>
+      <div style="margin-right: 10%"></div>
+    </header>
+
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+      "
+    >
+      <a href="pizza.html">
+        <button class="back-button">
+          <span
+            style="
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            "
+            >Back to home</span
+          >
+        </button></a
+      >
+    </div>
+
+    <section
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 8%;
+        height: 35vh;
+        border: 3px solid rgb(3, 22, 50);
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-bottom: 6%;
+        padding-top: 3%;
+        text-align: center;
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(
+          2,
+          2,
+          2,
+          0.539
+        ); /* Black w/opacity/see-through */
+
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      "
+    >
+      <h1
+        style="
+          margin: 0;
+          padding: 0%;
+          color: white;
+          border-bottom: 2px solid rgb(247, 197, 73);
+          font-size: 30px;
+        "
+      >
+        Fun Facts
+      </h1>
+
+      <p
+        id="fun-fact"
+        style="
+          color: rgb(241, 240, 240);
+          font-size: 24px;
+          font-weight: 200;
+          padding: 3%;
+          height: 30px;
+        "
+      >
+        Did you know? Pizza was originally a dish for poor people in Naples!
+      </p>
+
+      <button
+        class="fun-fact-button"
+        id="fun-fact-btn"
+        onclick="changeFunFact()"
+      >
+        Change Fun Fact
+      </button>
+    </section>
+
+    <script>
+      // script.js
+
+      function changeFunFact() {
+        const funFacts = [
+          "Did you know? Pizza was originally a dish for poor people in Naples!",
+          "The largest pizza ever made was over 122 feet in diameter!",
+          "In Japan, mayonnaise and squid are popular pizza toppings!",
+          "Pizza traces its origins to ancient Greece and Egypt.",
+          "Modern pizza originated in Naples, Italy, in the 18th century.",
+          "The Margherita pizza was named after Queen Margherita of Savoy in 1889.",
+          "Over 5 billion pizzas are sold worldwide each year.",
+          "Pizza arrived in the US with Italian immigrants in the late 19th century.",
+
+          // Add more fun facts as needed
+        ];
+
+        const randomIndex = Math.floor(Math.random() * funFacts.length);
+        const funFactElement = document.getElementById("fun-fact");
+        funFactElement.textContent = funFacts[randomIndex];
+      }
+    </script>
+
+    <footer
+      style="
+        display: flex;
+        bottom: 0%;
+        right: 0%;
+        left: 0%;
+        height: 50px;
+        background-color: rgb(3, 22, 50);
+      "
+    >
+      <audio style="height: 80%; padding-top: 2px" controls autoplay loop muted>
+        <source src="images/So Sweet - Lish Grooves.mp3" />
+      </audio>
+    </footer>
+  </body>
+</html>

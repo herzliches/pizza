@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Appetizing Pizza</title>
+    <link rel="icon" href="images/pizza-svgrepo-com.svg" type="image/x-icon" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .bg-image {
+        /* The image used */
+        background-image: url(images/mmmmm.webp);
+
+        /* Add the blur effect */
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+
+        /* Full height */
+        height: 70%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* Position text in the middle of the page/image */
+      .bg-text {
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position: absolute;
+        height: 45%;
+        padding-bottom: 3%;
+        top: 65%;
+        left: 50%;
+        /*learn bout the below code */
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+      }
+      .menu-button {
+        margin-left: 5%;
+        background-color: rgb(247, 197, 73);
+        color: white;
+        border: none;
+        font-weight: 500;
+        font-size: 100%;
+        transition: 0.2s;
+        cursor: pointer;
+        border-bottom: 1px solid white;
+      }
+
+      .menu-button:hover {
+        font-size: 105%;
+        padding-bottom: 2px;
+      }
+      .menu-button:active {
+        font-size: 100%;
+      }
+      .exp-button {
+        font-weight: 500;
+        font-size: 22px;
+        color: white;
+        background-color: rgb(247, 197, 73);
+        border-radius: 25px;
+        border: none;
+        text-align: center;
+        width: 200px;
+        height: 75px;
+        transition: all 0.5s;
+        cursor: pointer;
+      }
+      .exp-button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+      .exp-button:hover {
+        background-color: rgb(3, 22, 50);
+      }
+      .exp-button:active {
+        opacity: 0.7;
+      }
+      .exp-button:hover span {
+        padding-right: 25px;
+      }
+
+      .exp-button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+      .dropdown-content {
+        border: 1px solid rgb(247, 197, 73);
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 185px;
+        font-size: 15px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: rgb(3, 22, 50);
+        font-size: 16px;
+        color: white;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <header
+    style="
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      top: 0%;
+      left: 0%;
+      right: 0%;
+      height: 13%;
+      background-color: rgb(247, 197, 73);
+      align-items: center;
+      z-index: 100;
+      color: white;
+    "
+  >
+    <div style="height: 16%; display: flex; align-items: center; width: 20%" ;p>
+      <img
+        class="icon"
+        style="width: 25%; margin-left: 5%; margin-right: 10%"
+        src="images/pizza-svgrepo-com.svg"
+      />
+      <div class="dropdown" style="margin-right: 10%; cursor: pointer">
+        &#9776;
+        <div class="dropdown-content">
+          <a href="Popular recipies.html">Pizza recipe</a>
+          <a href="Top-chefs.html">Top chefs</a>
+          <a href="exp-pizza.html">Fun Facts</a>
+        </div>
+      </div>
+      <a href="pizza.html">
+        <button title="Menu" class="menu-button">Home</button></a
+      >
+    </div>
+    <div style="margin-right: 10%">
+      <h1>Appetizing Pizza</h1>
+    </div>
+    <div style="margin-left: 10%"></div>
+  </header>
+
+  <body>
+    <div class="bg-image"></div>
+
+    <div class="bg-text">
+      <h2>Savor the perfect slice</h2>
+      <h1 style="font-size: 50px">where gooey cheese meets</h1>
+      <p>zesty sauce on a crispy crust</p>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 13%;
+        height: 35vh;
+      "
+    >
+      <a href="menu.html">
+        <button class="exp-button">
+          <span
+            style="
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            "
+            >Explore more</span
+          >
+        </button></a
+      >
+    </div>
+    <footer
+      style="
+        display: flex;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 8%;
+        background-color: rgb(3, 22, 50);
+      "
+    >
+      <audio style="height: 80%; padding: 3px" controls autoplay loop muted>
+        <source src="images/So Sweet - Lish Grooves.mp3" />
+      </audio>
+    </footer>
+  </body>
+</html>

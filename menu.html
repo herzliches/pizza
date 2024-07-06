@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Appetizing Pizza</title>
+    <link rel="icon" href="images/pizza-svgrepo-com.svg" type="image/x-icon" />
+
+    <style>
+      .icons {
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      .icons:hover {
+        background-color: rgb(3, 22, 50);
+        font-size: 16px;
+      }
+      .svgs {
+        height: 30px;
+      }
+      a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      .slider {
+        position: relative;
+        overflow: hidden;
+        width: 68%;
+        margin-top: 10%;
+      }
+      .Images {
+        display: flex;
+        width: 100%;
+      }
+      .Images img {
+        height: 460px;
+        width: 100%;
+        transition: all 0.15s ease;
+        border-radius: 10px;
+      }
+      .Images input {
+        display: none;
+      }
+      .dot {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+      }
+      .dot label {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: solid 3px black;
+        cursor: pointer;
+        transition: all 0.15 ease;
+        margin: 5px;
+      }
+      .dot label:hover {
+        background: black;
+      }
+      #img1:checked ~ .pic {
+        margin-left: 0%;
+      }
+      #img2:checked ~ .pic2 {
+        margin-left: -100%;
+      }
+      #img3:checked ~ .pic3 {
+        margin-left: -200%;
+      }
+      #img4:checked ~ .pic4 {
+        margin-left: -300%;
+      }
+
+      .dropdown-content {
+        border: 1px solid rgb(247, 197, 73);
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 185px;
+        font-size: 15px;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown-content a:hover {
+        background-color: rgb(3, 22, 50);
+        font-size: 16px;
+        color: white;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body
+    style="margin: 0; padding: 0%; font-family: Roboto, Arial; margin-left: 35%"
+  >
+    <header
+      style="
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        height: 13%;
+        background-color: rgb(247, 197, 73);
+        align-items: center;
+        z-index: 100;
+        color: white;
+      "
+    >
+      <div
+        style="height: 16%; display: flex; align-items: center; width: 20%"
+        ;p
+      >
+        <img
+          class="icon"
+          style="width: 25%; margin-left: 5%; margin-right: 10%"
+          src="images/pizza-svgrepo-com.svg"
+        />
+        <div class="dropdown" style="margin-right: 10%; cursor: pointer">
+          &#9776;
+          <div class="dropdown-content">
+            <a href="Popular recipies.html">Pizza recipe</a>
+            <a href="Top-chefs.html">Top chefs</a>
+            <a href="exp-pizza.html">Fun Facts</a>
+          </div>
+        </div>
+      </div>
+
+      <h1 style="margin-right: 10%">Appetizing Pizza</h1>
+      <div style="margin-right: 11%"></div>
+    </header>
+    <nav
+      style="
+        display: flex;
+        position: fixed;
+        top: 13%;
+        bottom: 0%;
+        left: 0%;
+        width: 12%;
+        background-color: rgb(247, 197, 73);
+        flex-direction: column;
+        color: white;
+        font-size: 15px;
+      "
+    >
+      <div class="icons">
+        <a href="pizza.html">
+          <img class="svgs" src="images/home.svg" />
+          <div style="width: 75px; padding-left: 10px">Home</div>
+        </a>
+      </div>
+
+      <div class="icons">
+        <img class="svgs" src="images/history.svg" />
+
+        <div style="width: 75px; padding-left: 5%">History</div>
+      </div>
+      <div class="icons">
+        <img class="svgs" src="images/specials.svg" />
+
+        <div style="width: 75px; padding-left: 5%">Specials</div>
+      </div>
+      <div class="icons">
+        <img class="svgs" src="images/blogs.svg" />
+
+        <div style="width: 75px; padding-left: 5%">Blogs</div>
+      </div>
+      <div class="icons">
+        <img class="svgs" src="images/gallery.svg" />
+
+        <div style="width: 75px; padding-left: 5%">Gallery</div>
+      </div>
+      <div class="icons">
+        <a style="text-align: center" href="contact us.html">
+          <img class="svgs" src="images/contact.svg" />
+
+          <div style="width: 78px; padding-left: 5%">Contact us</div></a
+        >
+      </div>
+    </nav>
+    <div class="slider">
+      <div class="Images">
+        <input type="radio" name="slide" id="img1" checked />
+        <input type="radio" name="slide" id="img2" checked />
+        <input type="radio" name="slide" id="img3" checked />
+        <input type="radio" name="slide" id="img4" checked />
+
+        <img src="images/p3.webp" class="pic" />
+        <img src="images/p1.webp" class="pic2" />
+        <img src="images/p4.jpeg" class="pic3" />
+        <img src="images/p2.jpeg" class="pic4" />
+      </div>
+      <div class="dot">
+        <label for="img1"></label>
+        <label for="img2"></label>
+        <label for="img3"></label>
+        <label for="img4"></label>
+      </div>
+    </div>
+  </body>
+</html>

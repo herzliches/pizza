@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <link rel="icon" href="images/pizza-svgrepo-com.svg" type="image/x-icon" />
+  </head>
+  <style>
+    .menu-button {
+      margin-left: 5%;
+      background-color: rgb(247, 197, 73);
+      color: white;
+      border: none;
+      font-weight: 500;
+      font-size: 100%;
+      transition: 0.2s;
+      cursor: pointer;
+      border-bottom: 1px solid white;
+    }
+
+    .menu-button:hover {
+      font-size: 105%;
+      padding-bottom: 2px;
+    }
+    .menu-button:active {
+      font-size: 100%;
+    }
+    .dropdown-content {
+      border: 1px solid rgb(247, 197, 73);
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 185px;
+      font-size: 15px;
+    }
+    .dropdown-content .drop-links {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content .drop-links:hover {
+      background-color: rgb(3, 22, 50);
+      font-size: 16px;
+      color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+  <body
+    style="
+      font-family: Roboto, Arial;
+      color: rgb(3, 22, 50);
+      margin: 0%;
+      padding: 0%;
+    "
+  >
+    <header
+      style="
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        height: 13%;
+        background-color: rgb(247, 197, 73);
+        align-items: center;
+        z-index: 100;
+        color: white;
+      "
+    >
+      <div
+        style="height: 16%; display: flex; align-items: center; width: 20%"
+        ;p
+      >
+        <img
+          class="icon"
+          style="width: 25%; margin-left: 5%; margin-right: 10%"
+          src="images/pizza-svgrepo-com.svg"
+        />
+        <div class="dropdown" style="margin-right: 10%; cursor: pointer">
+          &#9776;
+          <div class="dropdown-content">
+            <a class="drop-links" href="Popular recipies.html">Pizza recipe</a>
+            <a class="drop-links" href="Top-chefs.html">Top chefs</a>
+            <a class="drop-links" href="exp-pizza.html">Fun Facts</a>
+          </div>
+        </div>
+        <a href="pizza.html">
+          <button title="Menu" class="menu-button">Home</button></a
+        >
+      </div>
+      <div style="margin-right: 10%">
+        <h1>Appetizing Pizza</h1>
+      </div>
+      <div style="margin-left: 10%"></div>
+    </header>
+
+    <h2 style="margin-top: 8%; text-align: center; line-height: 18px">
+      Pizza Recipes
+      <p style="font-size: 15px; font-style: italic">
+        <a class="video-link" href="https://tasty.co/recipe/pizza-dough"
+          >Make your own pizza!</a
+        >
+      </p>
+    </h2>
+    <style>
+      .container {
+        box-shadow: 5px 10px rgb(96, 96, 96);
+      }
+      .video-pic {
+        width: 100%;
+      }
+
+      .video-link {
+        text-decoration: none;
+        color: rgb(3, 22, 50);
+        transition: all 0.15s ease;
+      }
+      .video-link:hover {
+        color: rgb(247, 197, 73);
+        border-bottom: 2px solid rgb(247, 197, 73);
+        padding-bottom: 1px;
+      }
+      .view {
+        font-weight: 700;
+        color: rgb(85, 84, 84);
+      }
+      .sep-link {
+        text-decoration: none;
+      }
+      .sep-link:hover {
+        border: none;
+      }
+    </style>
+    <div
+      style="
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        column-gap: 4%;
+        margin-left: 1%;
+      "
+    >
+      <!--video # 1-->
+      <div
+        style="border: 3px solid rgb(247, 197, 73); margin-bottom: 5%"
+        class="container"
+      >
+        <div class="video-img">
+          <img
+            class="video-pic"
+            style="width: 370px; height: 210px"
+            src="images/videopic3.webp"
+          />
+        </div>
+        <div class="stats-container">
+          <div class="video title">
+            <h4 style="line-height: 22px; width: 370px; height: 50px">
+              <a class="video-link" href="https://youtu.be/sv3TXMSv6Lw">
+                The Best Homemade Pizza You'll Ever Eat</a
+              >
+            </h4>
+          </div>
+          <div class="view" style="font-size: 13px">34M views</div>
+          <div class="profile" style="padding: 2%; margin-top: 3%">
+            <div class="pfp-img">
+              <a class="sep-link" href="https://www.youtube.com/@buzzfeedtasty">
+                <img
+                  style="
+                    width: 30%;
+                    border-radius: 50%;
+                    border: 2px solid rgb(3, 22, 50);
+                  "
+                  src="images/c5.jpg"
+              /></a>
+            </div>
+            <div class="pfp-name">
+              <strong style="font-style: italic"
+                ><a
+                  class="video-link"
+                  href="https://www.youtube.com/@buzzfeedtasty"
+                  >Tasty</a
+                ></strong
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--video # 3-->
+      <div
+        style="border: 3px solid rgb(247, 197, 73); margin-bottom: 5%"
+        class="container"
+      >
+        <div class="video-img" style="margin-bottom: 5px">
+          <img
+            class="video-pic"
+            style="width: 380px; height: 210px"
+            src="images/videopic.webp"
+          />
+        </div>
+        <div
+          class="stats-container"
+          style="padding-left: 2%; padding-right: 2%"
+        >
+          <div class="video title">
+            <h4 style="line-height: 22px; width: 370px; height: 55px">
+              <a
+                class="video-link"
+                href="https://www.youtube.com/watch?v=3Z6TCicRLhs&pp=ygUMY2hlZXN5IHBpenph"
+              >
+                Found a new way to make Double Cheese Pizza! No kneading!
+                Incredibly easy! Best pizza in the world</a
+              >
+            </h4>
+          </div>
+          <div class="view" style="font-size: 13px">2.2M views</div>
+          <div class="profile" style="padding: 2%; margin-top: 3%">
+            <div class="pfp-img">
+              <a class="sep-link" href="https://www.youtube.com/@qiongcooking">
+                <img
+                  style="
+                    width: 30%;
+                    border-radius: 50%;
+                    border: 2px solid rgb(3, 22, 50);
+                  "
+                  src="images/c4.jpg"
+              /></a>
+            </div>
+            <div class="pfp-name">
+              <strong style="font-style: italic"
+                ><a
+                  class="video-link"
+                  href="https://www.youtube.com/@qiongcooking"
+                  >Qiong Cooking</a
+                ></strong
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--video # 3-->
+      <div
+        style="border: 3px solid rgb(247, 197, 73); margin-bottom: 5%"
+        class="container"
+      >
+        <div class="video-img" style="margin-bottom: 5px">
+          <img
+            class="video-pic"
+            style="width: 370px; height: 210px"
+            src="images/videopic2.webp"
+          />
+        </div>
+        <div class="stats-container">
+          <div class="video title">
+            <h4
+              style="padding: 1%; line-height: 22px; width: 370px; height: 50px"
+            >
+              <a
+                class="video-link"
+                href="https://www.youtube.com/watch?v=3Z6TCicRLhs&pp=ygUMY2hlZXN5IHBpenph"
+              >
+                Make Your Own: Pepperoni Pizza</a
+              >
+            </h4>
+          </div>
+          <div class="view" style="font-size: 13px">10M views</div>
+          <div class="profile" style="padding: 2%; margin-top: 3%">
+            <div class="pfp-img">
+              <a
+                class="sep-link"
+                href="https://www.youtube.com/@croutoncrackerjacks"
+              >
+                <img
+                  style="
+                    width: 30%;
+                    border-radius: 50%;
+                    border: 2px solid rgb(3, 22, 50);
+                  "
+                  src="images/c6.jpg"
+              /></a>
+            </div>
+            <div class="pfp-name">
+              <strong style="font-style: italic"
+                ><a
+                  class="video-link"
+                  href="https://www.youtube.com/@croutoncrackerjacks"
+                  >Crouton Crackerjacks</a
+                ></strong
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer
+      style="
+        display: flex;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 50px;
+        background-color: rgb(3, 22, 50);
+      "
+    >
+      <audio style="height: 80%; padding: 3px" controls autoplay loop muted>
+        <source src="images/So Sweet - Lish Grooves.mp3" />
+      </audio>
+    </footer>
+  </body>
+</html>
